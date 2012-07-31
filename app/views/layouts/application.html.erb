@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Depot</title>
+  <title>Catalog</title>
   <%= stylesheet_link_tag :all %>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
+<body id="store">
+	<div id="banner">
+		<%= image_tag("logo.png") %>
+		<%= @page_title || "Make up title goes here"%>
+	</div>
+	<div id="colums">
+		<div id="side">
+			<a href="index.html">Home</a><br/>
+			<a href="index.html">FAQ</a><br/>
+			<a href="index.html">Blog</a><br/>
+			<a href="index.html">Contact</a><br/>			
+			
+		</div>
+	</div>
+	<div id="main">
 <%= yield %>
-
+	</div>
 </body>
 </html>
